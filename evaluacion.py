@@ -43,18 +43,60 @@ print(f"the total is: {total}")
 # Exercise 6: While Loop
 # Write a program that asks the user for numbers and stops when they enter 0.
 
+user_number = 1
+while user_number != 0:
+    user_number = int(input("Tell me a number, 0 to stop: "))
+    print(f"You told me the number {user_number}")
+print("you stop the program.")
 
 # Exercise 7: Functions - Factorial
 # Write a function to calculate the factorial of a number.
 
 
+def factorial(number):
+    result = 1
+    for i in range(1, number + 1):
+        result *= i
+    print(f"{number} factorial is: {result}")
+
+
+factorial(5)
+
 # Exercise 8: Classes - Person Object
 # Define a class `Person` with attributes `name` and `age` and a method to introduce the person.
 
 
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def saludar(self):
+        print(f"Hello {self.name}, you are {self.age} years old.")
+
+
+person_1 = Person("Camilo", 25)
+person_1.saludar()
+
 # Exercise 9: List Filtering
 # Given a list of numbers, create a new list with only even numbers.
 
+numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+new_list = []
+
+for n in numbers:
+    if n % 2 == 0:
+        new_list.append(n)
+
+print(new_list)
 
 # Exercise 10: String Reverse
 # Write a function that reverses a string.
+
+
+def inverted(word):
+    word = "".join(reversed(word))
+    return word
+
+
+print(inverted("camilo"))
