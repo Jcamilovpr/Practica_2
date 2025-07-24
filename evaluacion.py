@@ -105,17 +105,59 @@ print(inverted("camilo"))
 # Write a function that checks if a number is prime.
 
 
+def prime(n):
+    if n <= 1:
+        return f"{n} is not prime."
+    for i in range(2, int(n/2) + 1):
+        if n % i == 0:
+            return f"{n} is not prime."
+    return f"{n} is prime."
+
+
+print(prime(7))
+print(prime(4))
+print(prime(2))
+
+
 # Exercise 12: Dictionary Usage
 # Create a dictionary with three people's ages and print the age of a specific person.
 
+people = {
+    "camilo": 23,
+    "sebastian": 40,
+    "cristian": 15
+}
+
+print(f"la edad de  sebastian es {people['sebastian']}")
 
 # Exercise 13: Count Character Occurrences
 # Write a function that counts how many times a character appears in a string.
 
 
+def counter(input, letter):
+    return input.lower().count(letter.lower())
+
+
+print(f"Your letter apears {counter('camila', 'a')} times")
+
+
 # Exercise 14: Fibonacci Sequence
 # Write a function that returns the Fibonacci sequence up to `n` terms.
 
+def fibonacci(n):
+    fibonacci_list = [0, 1]
+    for i in range(1, n):
+        fibonacci_list.append(fibonacci_list[-2] + fibonacci_list[-1])
+    return fibonacci_list[:n]
 
+
+print(fibonacci(5))
 # Exercise 15: Find the Largest Number
 # Write a function that finds the largest number in a list.
+
+
+def find_max(numbers):
+    return max(numbers)
+
+
+print(find_max([4, 9, 2, 7, 5]))
