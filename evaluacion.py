@@ -1,5 +1,6 @@
 # Exercise 1: Variables and Operators
 # Write a Python program to define two numbers and print their sum, difference, product, and quotient.
+import random
 number_1 = int(input("Give me a number:"))
 number_2 = int(input("Give me another number:"))
 
@@ -166,18 +167,56 @@ print(find_max([4, 9, 2, 7, 5]))
 # Exercise 16: File Handling
 # Write a Python program to write and read a file.
 
+with open("test.txt", "w") as file:
+    file.write("Hello, file handling!")
+
+with open("test.txt", "r") as file:
+    content = file.read()
+    print(content)
+
 
 # Exercise 17: Remove Duplicates from List
 # Write a function that removes duplicates from a list.
 
+list_1 = [1, 1, 2, 2, 5, 6, 7, 8, 8, 9, 10, 10]
+set_1 = set(list_1)
+list_2 = list(set_1)
+
+print(list_2)
 
 # Exercise 18: Password Validator
 # Write a function that checks if a password meets security conditions.
 
 
+def is_valid_password(password):
+    return len(password) >= 8 and any(char.isdigit() for char in password) and any(char.isupper() for char in password)
+
+
+print(is_valid_password("paSs1234"))
+
+
 # Exercise 19: Find Common Elements
 # Write a function that finds common elements between two lists.
+
+def common_elements(list1, list2):
+    return list(set(list1) & set(list2))
+
+
+print(common_elements([1, 2, 3, 4], [3, 4, 5, 6]))
 
 
 # Exercise 20: Guess the Number Game
 # Write a simple game where the user has to guess a random number between 1 and 10.
+
+
+number = random.randint(1, 10)
+guess = 0
+
+while guess != number:
+    guess = int(input("Guess a number between 1 and 10: "))
+    if guess < number:
+        print("Too low!")
+    elif guess > number:
+        print("Too high!")
+    else:
+        print("Congratulations! You guessed it.")
