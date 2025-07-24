@@ -100,3 +100,22 @@ def inverted(word):
 
 
 print(inverted("camilo"))
+
+# Exercise 11: Prime Number Check
+# Write a function that checks if a number is prime.
+
+
+# Exercise 12: Dictionary Usage
+# Create a dictionary with three people's ages and print the age of a specific person.
+
+
+# Exercise 13: Count Character Occurrences
+# Write a function that counts how many times a character appears in a string.
+
+
+# Exercise 14: Fibonacci Sequence
+# Write a function that returns the Fibonacci sequence up to `n` terms.
+
+
+# Exercise 15: Find the Largest Number
+# Write a function that finds the largest number in a list.
