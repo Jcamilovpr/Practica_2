@@ -161,3 +161,23 @@ def find_max(numbers):
 
 
 print(find_max([4, 9, 2, 7, 5]))
+
+
+# Exercise 16: File Handling
+# Write a Python program to write and read a file.
+
+
+# Exercise 17: Remove Duplicates from List
+# Write a function that removes duplicates from a list.
+
+
+# Exercise 18: Password Validator
+# Write a function that checks if a password meets security conditions.
+
+
+# Exercise 19: Find Common Elements
+# Write a function that finds common elements between two lists.
+
+
+# Exercise 20: Guess the Number Game
+# Write a simple game where the user has to guess a random number between 1 and 10.
